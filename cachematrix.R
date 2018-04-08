@@ -1,7 +1,7 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-##create special matrix
+##create special matrix for getting or calculating matrix inverse
 makeCacheMatrix <- function (x = matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -32,4 +32,8 @@ cacheSolve <- function (x, ...) {
   x$setinv(inv)
   inv
 }
-
+##test case
+ test <- matrix(1:4, 2,2)
+> test1 <- makeCacheMatrix(test)
+> cacheSolve(test1)
+> cacheSolve(test1)
